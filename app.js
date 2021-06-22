@@ -46,8 +46,10 @@ mongoose.connect(process.env.DATABASE,{
 })
 
 const port = process.env.PORT || 8000
+console.log('working');
 if(process.env.NODE_ENV ==='production'){
-    app.use(express.static('ecommerce-front/build'))
+    console.log('working2');
+    app.use(express.static('client/build'))
 }
 app.listen(port,()=>{
     console.log(`node server is running at port ${port}`)

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd ecommerce-front && npm run build -prod" ,
-    "install-client": "cd bango-shopping-front && npm install",
+    "build": "cd client && npm run build -prod" ,
+    "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build -prod",
     "start": "node app.js"
   },
