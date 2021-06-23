@@ -1,0 +1,10 @@
+.search-result{
+    width:10%;
+    float:right;
+}
+.search-result .search-result-button{
+    background-color: #fff;
+}
+.search-result .search-result-button:hover{
+    background-color: #ff9900;
+}

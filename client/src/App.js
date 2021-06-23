@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Routes from './Routes';
+import {Provider} from 'react-redux';
+import ReduxThunk from 'redux-thunk';
+import logger from  'redux-logger';
+import {createStore,applyMiddleware} from 'redux';
+import rootReducer from '../src/redux/rootreducer';
+import FooterComponent from './core/FooterComponent/FooterComponent';
+import HeaderComponent from './core/HeaderComponent/HeaderComponent';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+let middleware =[];
+if(process.env.NODE_ENV === 'development'){
+  middleware=[ReduxThunk,logger];
 }
+  else{
+    middleware=[ReduxThunk]
+  }
+
+const store=createStore(rootReducer,applyMiddleware(...middleware))
+
+const App = () => {
+    return (
+        <>
+        <Provider store={store}>
+            <HeaderComponent/>
+            <Routes/>
+            <FooterComponent/>
+          </Provider>
+        </>
+    )
+};
 
 export default App;

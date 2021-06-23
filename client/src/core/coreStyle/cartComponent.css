@@ -1,0 +1,28 @@
+.bango-cart {
+    background-color: #2e353d;
+    padding: 0px 25px;
+}
+.bango-cart table{
+    text-align: center;
+    vertical-align: middle;
+    padding:25px;
+    background-color: #ff9900;
+
+}
+.bango-cart table .button-remove span{
+   color: red;
+   font-size:25px;
+   position: relative;
+   left:-30px;
+
+    
+}
+.bango-cart .payment-info{
+    background-color: #2e353d;
+    padding:25px;
+    color:#fff;
+    border-left:15px solid #000;
+}
+.bango-cart .payment-info input{
+    margin: 10px 5px;
+}

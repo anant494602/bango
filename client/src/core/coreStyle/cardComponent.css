@@ -1,0 +1,23 @@
+.card{
+    margin:20px 0;
+}
+.card .card-header {
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    color:#FF9900;
+}
+.card .card-body button{
+    text-align: center;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: bold;
+    background-color: #FF9900;
+    border-radius: 40px;
+    border:1px solid #FF9900;
+}
+.card .card-body span,.card .card-body small{
+    font-size: 16px;
+    text-transform: capitalize;
+
+}

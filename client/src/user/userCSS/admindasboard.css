@@ -1,0 +1,9 @@
+.admin-dashboard .list-group{
+    min-height: 530px;
+    background-color: #2e353d;
+    color:#fff
+}
+.admin-dashboard .list-group .list-group-item {
+    background-color: #2e353d;
+    padding:20px;
+}
