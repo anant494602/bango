@@ -63,7 +63,7 @@ export const getCategory = categoryId => {
 };
 
 export const getCategories = () => {
-    return fetch(`${API}/categories`, {
+    return fetch(`/api/categories`, {
         method: 'GET'
     })
         .then(response => {
