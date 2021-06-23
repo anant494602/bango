@@ -34,7 +34,9 @@ app.use('/api', userRoutes);
 app.use('/api', categoryRoutes);
 app.use('/api', productRoutes);
 
-
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 //db connection
 mongoose.connect(process.env.DATABASE,{
     useNewUrlParser: true,
@@ -51,6 +53,7 @@ if(process.env.NODE_ENV ==='production'){
     console.log('working2');
     app.use(express.static('client/build'))
 }
+
 app.listen(port,()=>{
     console.log(`node server is running at port ${port}`)
 })
